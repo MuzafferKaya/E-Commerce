@@ -15,5 +15,6 @@ namespace DomainModel.Entities.Customer
         public string City { get; set; } = string.Empty;            // Şehir adı
         public string Country { get; set; } = string.Empty;         // Ülke adı
         public string PostalCode { get; set; } = string.Empty;      // Posta kodu
+        public bool IsDeleted { get; set; } = false;
     }
 }
