@@ -7,9 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DomainModel.Extensions
 {
-    public static class AddServiceExtension
+    public static class DomainModelExtension
     {
-        public static IServiceCollection AddService(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddDomainModelServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));

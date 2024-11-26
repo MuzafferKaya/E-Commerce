@@ -1,4 +1,5 @@
 using DomainModel.Extensions;
+using DomainService.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddService(builder.Configuration);
+builder.Services.AddDomainModelServices(builder.Configuration);
+builder.Services.AddDomainServices();
 
 var app = builder.Build();
 

@@ -7,9 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Services\" />
+    <Compile Remove="Abstractions\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Abstractions\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Abstractions\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentResults" Version="3.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Dto\Dto.csproj" />
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj" />
   </ItemGroup>
 
 </Project>
